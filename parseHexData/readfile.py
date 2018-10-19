@@ -1,11 +1,12 @@
+import codecs
 class FilePluse:
 	def __init__(self):
-		self.filepath = 'test.txt'
+		self.filepath = '84218386.bin'
 		self.pluseData = []
 		self.hexData = []
 
 	def readFile(self):
-		with open(self.filepath, 'rt') as f:
+		with codecs.open(self.filepath, 'rt', encoding='utf-8', errors='ignore') as f:
 			for line in f:
 				self.parseData(line)
 
